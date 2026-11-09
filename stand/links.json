@@ -1,10 +1,10 @@
 {
  "_설명": "책 『스키 위에 서라』 QR 고정 링크. 유튜브에 묶음을 올리면 bundles에 주소만 넣는다. 촬영분이 들어오면 해당 영상 ready를 true로, t를 새 시작초로 바꾼다.",
  "bundles": {
-  "1": "",
-  "2": "",
-  "3": "",
-  "4": ""
+  "1": "https://youtu.be/duqJ8FzU_tE",
+  "2": "https://youtu.be/KiziCq8URNs",
+  "3": "https://youtu.be/h8VGRIQObsQ",
+  "4": "https://youtu.be/31cx9ks_sWo"
  },
  "videos": {
   "1-1": {
