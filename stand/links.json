@@ -1,0 +1,172 @@
+{
+ "_설명": "책 『스키 위에 서라』 QR 고정 링크. 유튜브에 묶음을 올리면 bundles에 주소만 넣는다. 촬영분이 들어오면 해당 영상 ready를 true로, t를 새 시작초로 바꾼다.",
+ "bundles": {
+  "1": "",
+  "2": "",
+  "3": "",
+  "4": ""
+ },
+ "videos": {
+  "1-1": {
+   "title": "평지 포지션 만들기",
+   "chapter": "1장",
+   "bundle": 1,
+   "t": 1,
+   "ready": false
+  },
+  "1-2": {
+   "title": "머리 위치와 밸런스",
+   "chapter": "1장",
+   "bundle": 1,
+   "t": 41,
+   "ready": true
+  },
+  "D-1": {
+   "title": "발바닥 센서",
+   "chapter": "1장",
+   "bundle": 1,
+   "t": 78,
+   "ready": true
+  },
+  "2-1": {
+   "title": "세 관절 쿠션",
+   "chapter": "2장",
+   "bundle": 1,
+   "t": 108,
+   "ready": true
+  },
+  "2-2": {
+   "title": "세 관절 쿠션 비교",
+   "chapter": "2장",
+   "bundle": 1,
+   "t": 167,
+   "ready": true
+  },
+  "2-3": {
+   "title": "지그재그 사이드 점프",
+   "chapter": "2장",
+   "bundle": 1,
+   "t": 227,
+   "ready": false
+  },
+  "D-2": {
+   "title": "세 관절 함께",
+   "chapter": "2장",
+   "bundle": 1,
+   "t": 256,
+   "ready": true
+  },
+  "3-7": {
+   "title": "초보적인 플루그 턴",
+   "chapter": "3장",
+   "bundle": 2,
+   "t": 1,
+   "ready": true
+  },
+  "4-1": {
+   "title": "플루그 턴에서 베이직 패러렐로",
+   "chapter": "4장",
+   "bundle": 2,
+   "t": 26,
+   "ready": true
+  },
+  "4-2": {
+   "title": "사활강(패러렐)",
+   "chapter": "4장",
+   "bundle": 2,
+   "t": 53,
+   "ready": true
+  },
+  "4-3": {
+   "title": "베이직 패러렐 연속턴",
+   "chapter": "4장",
+   "bundle": 2,
+   "t": 73,
+   "ready": false
+  },
+  "D-3": {
+   "title": "스트레칭 전환",
+   "chapter": "4장",
+   "bundle": 2,
+   "t": 108,
+   "ready": true
+  },
+  "D-4": {
+   "title": "영각과 속도",
+   "chapter": "4장",
+   "bundle": 2,
+   "t": 142,
+   "ready": true
+  },
+  "5-1": {
+   "title": "슈템 턴(롱)",
+   "chapter": "5장",
+   "bundle": 3,
+   "t": 1,
+   "ready": true
+  },
+  "5-2": {
+   "title": "슈템 턴(미디엄)",
+   "chapter": "5장",
+   "bundle": 3,
+   "t": 31,
+   "ready": true
+  },
+  "5-3": {
+   "title": "슈템 턴(숏)",
+   "chapter": "5장",
+   "bundle": 3,
+   "t": 56,
+   "ready": true
+  },
+  "5-4": {
+   "title": "횡활주 ①",
+   "chapter": "5장",
+   "bundle": 3,
+   "t": 80,
+   "ready": true
+  },
+  "5-5": {
+   "title": "횡활주 ②",
+   "chapter": "5장",
+   "bundle": 3,
+   "t": 103,
+   "ready": true
+  },
+  "5-6": {
+   "title": "패러렐로 가는 두 길",
+   "chapter": "5장",
+   "bundle": 3,
+   "t": 126,
+   "ready": false
+  },
+  "D-5": {
+   "title": "외향·외경",
+   "chapter": "5장",
+   "bundle": 3,
+   "t": 165,
+   "ready": true
+  },
+  "6-1": {
+   "title": "부츠 커프와 굴신",
+   "chapter": "6장",
+   "bundle": 4,
+   "t": 1,
+   "ready": true
+  },
+  "7-1": {
+   "title": "기초 패러렐 종합활강",
+   "chapter": "7장",
+   "bundle": 4,
+   "t": 15,
+   "ready": true
+  },
+  "7-2": {
+   "title": "하루 연습 루틴",
+   "chapter": "7장",
+   "bundle": 4,
+   "t": 45,
+   "ready": false
+  }
+ }
+}

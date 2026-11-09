@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>스키 위에 서라 — 영상</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{--night:#0D2440;--ice:#F1F6FB;--ski-blue:#1E6FD9;--safety:#FF6B2C;--ink:#17273A;--ink-soft:#4A5B70;--line:#D7E3EF;}
+*{box-sizing:border-box;margin:0;padding:0}[hidden]{display:none!important}
+body{font-family:'Pretendard Variable',Pretendard,-apple-system,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;background:var(--ice);color:var(--ink);
+min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;max-width:440px;width:100%;padding:28px 24px;text-align:center}
+.book{font-size:14px;color:var(--ink-soft);margin-bottom:6px}
+.no{display:inline-block;background:var(--night);color:#fff;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px;margin:6px 0 10px}
+h1{font-size:24px;line-height:1.35;letter-spacing:-.02em;margin-bottom:14px}
+.msg{font-size:16px;line-height:1.6;color:var(--ink-soft)}
+.msg b{color:var(--safety)}
+a.btn{display:inline-block;margin-top:18px;background:var(--ski-blue);color:#fff;text-decoration:none;border-radius:10px;padding:12px 18px;font-weight:700}
+.foot{margin-top:18px;font-size:12px;color:var(--ink-soft)}
+</style>
+</head>
+<body>
+<main class="card">
+  <p class="book">『스키 위에 서라』 · 홍익북스</p>
+  <span class="no" id="no">영상</span>
+  <h1 id="title">영상을 여는 중…</h1>
+  <p class="msg" id="msg">잠시만 기다려 주세요.</p>
+  <a class="btn" id="go" href="#" hidden>영상 보기</a>
+  <p class="foot">스키튜브 · 이 페이지는 책 QR 전용입니다</p>
+</main>
+<script>
+(function () {
+  var parts = location.pathname.replace(/\/+$/, "").split("/");
+  var id = decodeURIComponent(parts[parts.length - 1] || "").toUpperCase().replace(/^D-/, "D-");
+  var $ = function (k) { return document.getElementById(k); };
+  fetch("../links.json", { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (d) {
+    var v = d.videos[id];
+    if (!v) { $("title").textContent = "영상을 찾지 못했어요"; $("msg").textContent = "QR을 다시 찍어 주세요."; return; }
+    $("no").textContent = v.chapter + " · 영상 " + id;
+    $("title").textContent = v.title;
+    var base = d.bundles[String(v.bundle)] || "";
+    if (v.ready && base) {
+      var url = base + (base.indexOf("?") >= 0 ? "&" : "?") + "t=" + v.t;
+      $("msg").textContent = "유튜브로 이동합니다.";
+      $("go").href = url; $("go").hidden = false;
+      location.replace(url);
+    } else if (!v.ready) {
+      $("msg").innerHTML = "이 영상은 <b>시즌 촬영 후 12월에 추가</b>됩니다.<br>같은 QR로 다시 찍으면 열립니다.";
+    } else {
+      $("msg").textContent = "영상을 준비하고 있어요. 곧 열립니다.";
+    }
+  }).catch(function () { $("msg").textContent = "잠시 후 다시 시도해 주세요."; });
+})();
+</script>
+</body>
+</html>
